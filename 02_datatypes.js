@@ -30,5 +30,5 @@ console.log(typeof null)
 // Object - Important to note
 console.log(typeof undefined)
 // undefined
-console.log(typeof NaN)
+console.log(typeof NaN);
 // number - Important to note
