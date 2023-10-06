@@ -24,8 +24,11 @@ let isLoggedIn = false
 console.log(typeof "aryan")
 // String
 console.log(typeof age)
-// Number
+console.log(typeof(age))
+// number
 console.log(typeof null)
 // Object - Important to note
 console.log(typeof undefined)
 // undefined
+console.log(typeof NaN)
+// number - Important to note
