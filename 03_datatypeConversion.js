@@ -74,4 +74,32 @@ console.log(stringToNum)
 // 33
 
 
+/*-------------- [ OPERATORS ]--------------*/
+const value = 3
+let negValue = -value
+console.log(negValue);
+
+console.log(2+2);
+console.log(2-2);
+console.lo(2*2);
+console.lo(2**3);   // Exponent
+console.log(2/3);
+console.log(2%3);   // Remainder
+
+
+/*-------- [ Confusing String and Num Conversions ]--------*/
+console.log("1" + 2)
+// 12
+console.log(l + "2")
+// 12
+console.log("1" + 2 + 2)
+// 122
+console.log(l + 2 + "2")
+// 32
+console.log(true)
+// true
+console.log(+true)
+// 1 - Important to note - Conversion happened using +
+console.log(+"")
+// 0 - Conversion happened using +
 
