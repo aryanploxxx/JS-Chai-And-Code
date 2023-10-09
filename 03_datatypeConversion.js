@@ -103,3 +103,4 @@ console.log(+true)
 console.log(+"")
 // 0 - Conversion happened using +
 
+counter++
