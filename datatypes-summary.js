@@ -49,3 +49,34 @@ console.log(typeof myFunction);
 // Function / Object Function
 
 // All non-primitive datatypes return objects as their datatypes
+
+
+
+
+/*----------------------- [ MEMORY ] -----------------------*/
+/*
+    Stack (Primitive Datatypes) - We get Copy of value
+    Heap (Non-Primitive Datatypes) - Change in original value [Reference of original value is passed]
+
+    let var1 = "aryan"  [Primitive Datatype]
+    let var2 = var1
+    var2 = "gupta"
+    console.log(var2)
+    -> gupta
+    console.log(var1)
+    -> aryan [didn't change, because value copied, not passed by refernce]
+
+    let user1 = {                   [Primitive Datatype]
+        email: "user@gmail.com"
+        upi: "user@xyz"
+    }
+    let user2 = user1
+    -> values of user1 has been passed as reference to user2, any chnages made to user2 will be reflected in user1 also now.
+    user2.email = "random@google.com"
+    console.log(user1.email) -> random@google.com
+    console.log(user2.email) -> random@google.com
+
+
+
+
+*/
