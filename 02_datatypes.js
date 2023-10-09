@@ -32,3 +32,19 @@ console.log(typeof undefined)
 // undefined
 console.log(typeof NaN);
 // number - Important to note
+
+const score_1 = 100
+const score_2 = 100.3
+// Both are of number type
+
+
+// Symbols
+const id = Symbol('123')
+const anotherld = Symbol('123')
+console.log( id === anotherld )
+/// false
+
+
+// BigInt
+const bigNumber = 79867448655877570901n;
+// -> adding a 'n' at last ensures that the variable is defined of bigint datatype

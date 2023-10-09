@@ -29,27 +29,27 @@ console.log(value)
 // 1
 
 /*-------------- [ Case 4 ]--------------*/
-let score = null
-let value = Number(score)
-console.log(typeof value)
+let score1 = null
+let value2 = Number(score1)
+console.log(typeof value2)
 // number
-console.log(value)
+console.log(value2)
 // 0
 
 /*-------------- [ Case 5 ]--------------*/
 let score = undefined
-let value = Number(score)
-console.log(typeof value)
+let value1 = Number(score)
+console.log(typeof value1)
 // number
-console.log(value)
+console.log(value1)
 // NaN
 
 /*-------------- [ Case 6 ]--------------*/
-let score = "aryan"
-let value = Number(score)
-console.log(typeof value)
+let scoree = "aryan"
+let valueee = Number(scoree)
+console.log(typeof valueee)
 // number
-console.log(value)
+console.log(valueee)
 // NaN
 
 
@@ -75,8 +75,8 @@ console.log(stringToNum)
 
 
 /*-------------- [ OPERATORS ]--------------*/
-const value = 3
-let negValue = -value
+const valuee = 3
+let negValue = -valuee
 console.log(negValue);
 
 console.log(2+2);
