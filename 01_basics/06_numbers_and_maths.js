@@ -17,16 +17,16 @@ console.log(balance.toString().length)
 console.log(balance.toFixed(2))
 // 100.00 -> added two decimal places to make it a decimal number
 
-const otherNumber = 23.8966
-console.log(otherNumber.toPrecision(3))
+const otherNumber1 = 23.8966
+console.log(otherNumber1.toPrecision(3))
 // Parameter inside the toPrecision function determines the numebr of significant digits to show
 // The value it returns is of string datatype
 // 23.9 -> Roughly rounds off the value too
-const otherNumber = 123.8966
-console.log(otherNumber.toPrecision(3))
+const otherNumber2 = 123.8966
+console.log(otherNumber2.toPrecision(3))
 // 124 -> rounded off value
-const otherNumber = 1123.8966
-console.log(otherNumber.toPrecision(3))
+const otherNumber3 = 1123.8966
+console.log(otherNumber3.toPrecision(3))
 // 1.12e+3
 
 
