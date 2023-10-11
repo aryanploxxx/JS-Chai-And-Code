@@ -1,6 +1,7 @@
 // Whenever we create an object using constructor, it creates a singleton object i.e. one of it's types
 // Object.create -> constructor method to create objects
 
+// Object Literal:
 const jsUser = {
     name: "Aryan",
     age: 18,
