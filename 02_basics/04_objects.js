@@ -112,20 +112,3 @@ console.log(Instructor)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
