@@ -18,7 +18,7 @@ let isLoggedIn = false
 // string -> ""
 // boolean -> true/false
 // null - datatype, also a standalone value - represneation of empty value - undefined nhi hai, bas khaali hai
-// undefined - when value hasn't been assigned to a defined variable
+// undefined - when value hasn't been assigned to a declared variable
 // symbols - used when uniqueness is required
 
 console.log(typeof "aryan")
@@ -42,7 +42,7 @@ const score_2 = 100.3
 const id = Symbol('123')
 const anotherld = Symbol('123')
 console.log( id === anotherld )
-/// false
+// false
 
 
 // BigInt
