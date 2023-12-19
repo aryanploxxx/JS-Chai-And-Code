@@ -14,7 +14,7 @@ let isLoggedIn = false
 
 // # Datatypes
 // number -> 2^53
-// binint
+// bigint
 // string -> ""
 // boolean -> true/false
 // null - datatype, also a standalone value - represneation of empty value - undefined nhi hai, bas khaali hai

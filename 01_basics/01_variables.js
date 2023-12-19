@@ -5,11 +5,12 @@ const accountID = 232142
 let accountEmail = "aryan@google.com"
 // let keyword is used in modern JS
 var accountPassword = "9y8y@*bn"
-// var keyword has issues with scoping, any function/ piece of code can call it anytime unline locally scoped variables
+// var keyword has issues with scoping, any function/ piece of code can call it anytime unlike locally scoped variables
 accountCity = "Jaipur"
-// It is not necessary to add a keyword before a variablle name, however it is highly not recommended
+// It is not necessary to add a keyword before a variable name, however it is highly not recommended
 let accountRandom;
-// Defining a variable, but not declaring it will result in 'undefined'
+// Declaring a variable, but not defining it will result in 'undefined'
 
 console.log(accountID)
 console.table([accountID, accountEmail, accountPassword, accountRandom])
+// Will output the variables in a tabular form, takes array/objects as input only
