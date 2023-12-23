@@ -2,11 +2,10 @@
 // These differences are based on the basis of the way these data/datatypes are stored in the memory and accessed from the memory.
 
 /*
-    Javascrip is a dynamically typed language
+    Javascript is a dynamically typed language
     const score = 100
     const score = false
     - We never told JS about what datatype must be in score, it automatically changes the datatype of score varaible
-
 */
 
 // # PRIMITIVE DATATYPE
@@ -31,7 +30,7 @@ console.log(typeof heros);
 
 {
     name: "Aryan",
-    age: 22,
+    age: 22
 }
 
 OR
@@ -75,8 +74,4 @@ console.log(typeof myFunction);
     user2.email = "random@google.com"
     console.log(user1.email) -> random@google.com
     console.log(user2.email) -> random@google.com
-
-
-
-
 */

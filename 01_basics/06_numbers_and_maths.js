@@ -12,7 +12,7 @@ BUT
 console.log(typeof balance.toString())
 /// String -> Now we have several properties of string like length, concat etc. which we can apply to this number
 console.log(balance.toString().length)
-// 100 - because 100 has 3 characters
+// 3 - because 100 has 3 characters
 
 console.log(balance.toFixed(2))
 // 100.00 -> added two decimal places to make it a decimal number

@@ -10,9 +10,10 @@ const myArr1 = [0, 1, 2, 3, "hello", true]
 
 /*
     Different datatypes can also be present in a single array
-    Javascrip arrays are re-sizable
+    Javascript arrays are re-sizable
     Arrays create a shallow copy whenever we perform a copy operation on it
-    Shallow copies of an object are copies that share the same reference, i.e chnages made in the copy, will reflect in the original
+    Shallow copies of an object are copies that share the same reference, 
+    i.e changes made in the copy, will reflect in the original
     Deep copies of an object is a copy which do not share the same reference
     JS Arrays are 0-indexed
 */

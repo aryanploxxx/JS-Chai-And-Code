@@ -17,7 +17,7 @@ console.log(jsUser.email)
 console.log(jsUser["email"])
 // Both are correct
 
-// By default all the keys in object are stroed in string format
+// By default all the keys in object are stored in string format
 console.log(jsUser[email])
 // The above output will throw error that email is not defined
 // However, in case when we use dot operator, these quotes are not required since it automatically assumes it of string datatypes
@@ -29,7 +29,7 @@ jsUser.full name
 OR
 jsUser."full name"
 // -> Both are wrong methods, in this case you will have to use the square brackets
-jsUser.["full name"]
+jsUser["full name"]
 
 
 const mySym = Symbol("key1")
@@ -38,7 +38,7 @@ const mySym = Symbol("key1")
     mySym: "mykey1"
 }
 console.log(jsUser.mySym)
-// It prints mukey1 as output, but it isn't being used as a symbol
+// It prints mykey1 as output, but it isn't being used as a symbol
 console.log(typeof jsUser.mySym)
 // String
 
@@ -66,7 +66,7 @@ console.log(jsUser.greeting());
 
 jsUser.greeting2 = function() {
     console.log(`hello js user, ${this.name}`);
-} // this keyword specified that the variable name we are accessign belongs to the same object of which property we are defining
+} // this keyword specified that the variable name we are accessing belongs to the same object of which property we are defining
 console.log(jsUser.greeting2());
 // hello js user, Aryan
 

@@ -1,8 +1,8 @@
 // Learn more about object destructuring
 
 const tinderUser =  new Object() // Singleton Object
-const tinderUser = {} // Not a Singleton Object
-console.log(tinderUser)
+const tinderUser1 = {} // Not a Singleton Object
+console.log(tinderUser1)
 // {}
 
 tinderUser.id = "123abc"
@@ -60,7 +60,7 @@ console.log(tinderUser);
 // {id: '123abc', name: 'sammy', isLoggedIn: false}
 console.log(Object.keys(tinderUser));
 // ['id', 'name', 'isLoggedIn']
-// Returns th keys in an array which can be used furthur by looping etc.
+// Returns the keys in an array which can be used furthur by looping etc.
 console.log(Object.values(tinderUser));
 // ['123abc', 'sammy', false]
 console.log(Object.entries(tinderUser));
@@ -79,7 +79,7 @@ const course = {
 }
 
 
-/* ++++++ Destructuring Values ++++++ */
+/* ++++++++++++++++++++++++ Destructuring Values ++++++++++++++++++++++++ */
 
 // Writing course.courseInstructor everytime we want to use this variable can lead to a messy code.
 // To avoid this we can extract the value in a variable

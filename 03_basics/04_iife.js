@@ -23,9 +23,10 @@ function chai() {
     // Named IIFE
     console.log('DB CONNECTED');
 })()
+
 ( () => {
     console.log('DB CONNECTED TWO');
-})()
+} )()
 // Here the first function executes, but the second function does not.
 // At first it might seem that it is due to arrow function
 // But on carefu; observation, we observe that iife functions do not know where to end the scope, hence they need a semicolon after the end of the function calling

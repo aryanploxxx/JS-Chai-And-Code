@@ -17,7 +17,7 @@ function addTwoNumber(num1, num2) {
     console.log(num1+num2);
 }
 addTwoNumber(3,4)
-// NaN
+// 7
 addTwoNumber(3,"4")
 // 34
 addTwoNumber(3,"a")
@@ -33,7 +33,7 @@ addTwoNumber(3,null)
 const result = addTwoNumber(3, 5)
 console.log("Result is: ",result);
 // Result is: undefined
-// This happened because there was return type in the function hence it did not return back anything specifically after being called
+// This happened because there was no return type in the function hence it did not return back anything specifically after being called
 
 // To solve this problem, redefine the function
 function addTwoNumber(num1, num2) {
@@ -62,7 +62,7 @@ function loginUserMsg(username) {
 // "" - assumed as false value
 // undefined - assumed as false value
 
-// if(!username) -> Ensures this statement runs only when username id undefined, because the '!' make the overall statement in of condition as false
+// if(!username) -> Ensures this statement runs only when username id undefined, because the '!' make the overall statement in if condition as false
 
 function loginUserMsg(username = "sam") {}
 // by default value of username would be sam
@@ -107,5 +107,6 @@ const myArr = [200, 100, 3000, 10]
 function returnSecValue(getarr) {
     return getarr[1]
 }
-returnSecValue(myArr)
-// 400
+let x = returnSecValue(myArr)
+console.log(x)
+// 100
