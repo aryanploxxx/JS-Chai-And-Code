@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Learning</title>
+</head>
+<body>
+<script>
+    const div = document.createElement('div')
+    // This div is just virtually generated in the memory as of now, this won't be displayed on any webpage
+    console.log(div);
+    // <div></div>
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    /*
+        div.innerText = "Chai aur code"
+        innerText first fetches the target and then overwrites it, so it not optimal
+        As of now, both are correct approaches, this an the below one
+    */
+    const addText = document.createTextNode("Chai aur code")
+    div.appendChild(addText)
+    // This is the preferred method to write anything inside a new tag
+
+    document.body.appendChild(div)
+</script>
+</body>
+</html>

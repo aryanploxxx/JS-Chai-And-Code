@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <!-- this is a comment -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    // [    MOVING FROM PARENT TO CHILDREN  ]
+    const content = document.querySelector('.parent')
+    console.log(content)
+    // Will print the entire parent class tag
+    // <div class="parent">...</div>
+    console.log(content.children)
+    // Will print the parents children in a HTMLCOllection(which is an array like property)
+    console.log(content.children[0])
+    // This is how we can access first children of the parent
+    // <div class="day">Monday</div>
+    console.log(content.children[0].innerHTML)
+    // Monday
+
+    // parent.children -> gives an htmlcollection - foreach loop doesn't work on it, but for loop surely does
+    for (let i = 0; i < parent.children.length; i++) {
+          console.log(parent.children[i].innerHTML);  
+    }
+
+    parent.children[1].style.color = "orange"
+    console.log(parent.firstElementChild);
+    // Returns the first child of the parent
+    console.log(parent.lastElementChild);
+    // Returns the last child of the parent
+
+
+    // [    MOVING FROM CHILDREN TO PARENT  ]
+    const dayOne = document.querySelector('.day')
+    // Since querySelector returns the first element of the query
+    console.log(dayOne.parenElement)
+    // <div class="parent">...</div>
+    console.log(dayOne.nextElementSibling)
+    // <div class="day">Tuesday</div>
+
+    console.log("Nodes: ", parent.childNodes);
+    // child tags are 4, but line breaks are 5 - so total child nodes are 9
+    // JS counts a line break also as a child node
+    
+
+
+
+
+</script>
+</html>
