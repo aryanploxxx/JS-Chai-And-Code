@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <p>Select the box to change the Background Color!</p>
+        <div class="inner-wrapper">
+            <div class="color-boxes" id="red"></div>
+            <div class="color-boxes" id="yellow"></div>
+            <div class="color-boxes" id="green"></div>
+            <div class="color-boxes" id="blue"></div>
+        </div>
+        <p>Alternatively, Enter a Custom Color:</p>
+        <div style="display: flex;justify-content: center;align-items: center;gap: 4px">
+            <form>
+                <input type="text" id="input" required>
+                <button id="submit">Submit</button>
+            </form>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="message"></div>
+    </div>
+    <script src="./changeColor.js"></script>
+</body>
+</html>
