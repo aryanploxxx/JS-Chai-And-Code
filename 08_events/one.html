@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <!-- 
+                <li><img width="200px" [  onclick="alert('hey')"  ]id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li> 
+                This onclick approack works, but is a bad practice to directly inject code in html 
+            -->
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // Events in JavaScript run sequentially, however there are exceptions
+    /*
+        document.getElementById('owl').onclick = fucntion() {
+            alert("owl clicked");
+        }
+        -> This approach is not wrong, it just provides less features
+    */
+    /*
+        document.getElementById('owl').addEventListener('click', fucntion(e) {}, false)
+        -> There is a third parameter too in addEventListener that by default is false, hence sometimes we can avoid writing it
+    */
+    document.getElementById('owl').addEventListener('click', function(e) {
+        // 'e' is an event object with many properties like returning clients timestamp when event occured, it's x, y, h, w
+    }, false)
+
+    // attachEvent is also a method
+    /*
+        -> To study these things about events:
+        type, timestamp, defaultPrevented
+        target, toElement, srcElement, currentTarget,
+        clientX, clientY, screenX, screenY
+        altkey, ctrlkey, shiftkey, keyCode
+    */
+
+    /* Event Propogation is of two types: Event Bubbling and Event Capturing */
+
+    document.getElementById('images').addEventListener('click', function(e) {
+        console.log("clicked inside the ul")
+    }, false)
+
+    document.getElementById('owl').addEventListener('click', function(e) {
+        console.log("owl clicked")
+    }, false)
+
+    /*
+        In the current scenario the output will be:
+        -> owl clicked
+        -> clicked inside the ul
+        What happened is called Event Bubbling - The default parameter (false) of Event Propogation
+        -> i.e. first the innermost event is executed and then it moves towards the outermost layer
+    */
+
+    document.getElementById('images').addEventListener('click', function(e) {
+        console.log("clicked inside the ul")
+    }, true)
+
+    document.getElementById('owl').addEventListener('click', function(e) {
+        console.log("owl clicked")
+    }, true)
+
+    /*
+        In the current scenario the output will be:
+        -> clicked inside the ul
+        -> owl clicked
+        What happened is called Event Capturing - The 'true' parameter of Event Propogation
+        -> i.e. first the outermost event is executed and then it moves towards the innermost layer
+    */
+
+    document.getElementById('images').addEventListener('click', function(e) {
+        console.log("clicked inside the ul")
+    }, true)
+
+    document.getElementById('owl').addEventListener('click', function(e) {
+        console.log("owl clicked")
+        e.stopPropagation()
+    }, true)
+
+    /*
+        There are however some scenarios where both of the layers might be executing different scripts, we can stop event bubbling in such scenarios
+    */
+
+    document.getElementById('google').addEventListener('click', function(e) {
+        e.preventDefault()
+        console.log("google clicked")
+    }, true)
+
+    /*
+        -> google clicked
+        -> clicked inside the ul
+        preventDefault() method prevents id google from doing it's default action i.e redirecting to google.com 
+    */
+
+    /*
+        Our Problem statement was to delete an image by clicking on it, not only the image but the entite li otherwise bullet points would have been left.
+        So our approach was to select the image, get it's parent node using events, and delete the parent tag.
+        This approach worked when we clicked on images by deleting their li's, but if we clicked on li's it deleted their parent node i.e. the entire ul
+        To prevent this, we put on a strict check using the tagName property of the events which returns the tagname of the target from which the event has occured
+            and check if the tagname matched with 'IMG' only then we allow to delete it's parent element that is 'LI'
+    */
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+            /*
+                removeIt.parentNode.removeChild(removeIt)
+                -> Another method to delete the node, by selecting the parent node of the node you want to delete 
+                   and then calling the removeChild method and specifying which child you want to remove
+            */
+        }  
+    })
+</script>
+</html>
