@@ -145,9 +145,8 @@ myConvertedArray.forEach( function(li) {
 })
 
 
-
-
-
+package.classList.add("button")
+// adds a new class
 
 // +++++++++++++++++++  two.html  ++++++++++++++++++++
 
