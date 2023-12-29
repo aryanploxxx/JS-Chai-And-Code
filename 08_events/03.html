@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+    const intervalId = setInterval(sayDate, 1000, "hi")
+    // setInterval has a third parameter too, which can be passed to the function whose reference we have provided
+    clearInterval(intervalId)
+    // Again the function will stop running instantly, as immediatly the clearInterval method is invoked
+    // To avoid this, we can add event listeners, which when invoked call the clearInterval method
+</script>
+</html>

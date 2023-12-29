@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    /*
+        setTimeout(function(){}, 1000)
+        -> This method executes a function once, after the specified time duration
+    */
+
+    setTimeout(function(){
+        console.log("Hitesh");
+    }, 2000)
+    // This will print Hitesh after 2 seconds
+
+    const sayHitesh = function(){
+        console.log("Hitesh");
+    }
+    setTimeout(sayHitesh, 2000)
+    // Another way to carry out the same thing
+    
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Best JS series"
+    }
+    const changeMe = setTimeout(changeText, 2000)
+
+
+    // Sometimes we want to stop a scheduled setTimeout function before it get's executed
+    const changeText1 = function(){
+        document.querySelector('h1').innerHTML = "Best JS series"
+    }
+    const changeMe1 = setTimeout(changeText1, 2000)
+    clearTimeout(changeMe1) // clearTimeout needs reference of what it needs to stop
+    // You might want to do it this way, but by the time setTimeout waits to execute the function, due to asynchronous nature of the function,
+    // the clearTimeout function already executes, which means we changeText1 never gets executed
+
+    // To solve this problem, we can add a clearTimeout method on a particular event
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+
+</script>
+</html>
