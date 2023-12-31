@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)
+    // It is an object through which we send as well as recieve data
+    // -> open has been just called, request hasn't been sent yet
+    // .open(method, string)
+    xhr.onreadystatechange = function(){
+        // onreadystatechange constantly monitors changes in state
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            // We get data in the form of a string hence data.followers initially does not return anything
+            // Therefore to access data from it we need to convert in the form of an object, or more precisely JSON format
+            console.log(data.followers);
+        }
+    }
+    xhr.send()
+    // .send calls the open() method
+</script>
+
+</html>
